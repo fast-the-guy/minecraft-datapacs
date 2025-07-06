@@ -1,7 +1,7 @@
 this datapack lets players craft more homes.
 
 
-###dependensies:
+### dependensies:
 
-##plugins
+## plugins
 mobishomes
