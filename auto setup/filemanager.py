@@ -17,6 +17,8 @@
 import shutil
 import os
 
+
+os.makedirs
 #remove files
 def rm(f):
 	try:
@@ -40,7 +42,7 @@ def mkdir(dirk):
 	try:
 		os.mkdir(dirk)
 	except:
-		return "filemanager module internal errorcode: 1"
+		os.makedirs(dirk)
 
 #rename things
 def rename(dirk):
