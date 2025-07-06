@@ -21,11 +21,11 @@ def create_root_structure():
     fm.mkdir(pack_name)                             #create root folder
     fm.cdir(pack_name)                              #change dir to root folder
     fm.mkdir("data")                                #create data folder for namespaces
-    fm.mkdir("data/"+pack_namespace+"/functions")   #create user namespace
+    fm.mkdir("data/"+pack_namespace+"/function")   #create user namespace
     fm.mkdir("data/"+pack_namespace+"/recipe")      #create user recepies
     fm.mkdir("data/"+pack_namespace+"/loot_table")  #create user loot table
     fm.mkdir("data/"+pack_namespace+"/dialog")      #create user dialog folder
-    fm.mkdir("data/minecraft/tags/functions")       #create minecraft namespace
+    fm.mkdir("data/minecraft/tags/function")       #create minecraft namespace
     
 
     #create help.txt
@@ -45,7 +45,7 @@ def create_root_structure():
     #3 make tick and load.mcfunction
     #make load.json
     print("working dir is:"+str(fm.lsdir()))
-    with open("data/minecraft/tags/functions/load.json", "w") as f:
+    with open("data/minecraft/tags/function/load.json", "w") as f:
         f.write("{")
         f.write('    "values": [')
         f.write('"'+pack_namespace+':load"')
@@ -53,7 +53,7 @@ def create_root_structure():
         f.write("}")
 
     #make tick.json
-    with open("data/minecraft/tags/functions/tick.json", "w") as f:
+    with open("data/minecraft/tags/function/tick.json", "w") as f:
         f.write("{")
         f.write('    "values": [')
         f.write('"'+pack_namespace+':tick"')
@@ -62,11 +62,11 @@ def create_root_structure():
     
 
     #make load.mcfunction
-    with open("data/"+pack_namespace+"/functions/load.mcfunction", "w") as f:
+    with open("data/"+pack_namespace+"/function/load.mcfunction", "w") as f:
         f.write("#this mcfunction will be run when datapack is loaded")
     
     #make tick.mcfunction
-    with open("data/"+pack_namespace+"/functions/tick.mcfunction", "w") as f:
+    with open("data/"+pack_namespace+"/function/tick.mcfunction", "w") as f:
         f.write("#this mcfunction will be evry tick")
 
               
